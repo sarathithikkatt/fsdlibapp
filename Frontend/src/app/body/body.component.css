@@ -1,0 +1,32 @@
+/* Library image */
+
+#img-label{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.body-space{
+    background-color:#ffffff;
+    height: 720px;
+}
+
+#centered{
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-family: "Sofia", sans-serif;
+    font-size: 60px;
+}
+
+#center-label{
+    margin-top: 10px;
+    margin-left: 42%;
+    font: 1em sans-serif;
+    font-weight: bold;
+}
+

@@ -1,0 +1,73 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>{{title}}
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="body-space top-spacer table-responsive"> 
+
+            <!--Form-->
+            <form method="POST" class="col-lg-8 upform" (ngSubmit)="updateBook()" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Title</label>
+                    <input type="text" name="title" [(ngModel)]="bookItem.title" class="form-control" id="booktitle" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Author</label>
+                    <input type="text" name="author" [(ngModel)]="bookItem.author" class="form-control" id="bookauthor" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Genre</label>
+                    <select name="genre" class="form-control" [(ngModel)]="bookItem.genre" aria-label="Default select example" id="bookgenre">
+                        <option value="Novel">Novel</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Autobiography">Autobiography</option>
+                        <option value="Non-fiction">Non-fiction</option>
+                        <option value="Short stories">Short stories</option>
+                        <option value="Atlases">Atlases</option>
+                        <option value="Poetry">Poetry</option>
+                        <option value="Article">Article</option>
+                        <option value="Dictionary">Dictionary</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Ohters">Ohters</option>
+                    </select>
+                    <div id="emailHelp" class="form-text">eg:- Novel,Autobiography,Fiction,etc.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputName" class="form-label">Image</label>
+                  <input type="file" name="image" class="form-control" id="bookimg">{{bookItem.image}}
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">About</label>
+                    <textarea name="about" class="form-control is-invalid" [(ngModel)]="bookItem.about" id="bookabout" placeholder="Write something about this book" required>{{bookObj.about}}</textarea>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary" id="up-btn">Update Book</button>
+                </div>
+              </form>
+              <!--/Form-->
+
+        </div>
+    </div>
+  </div> 
+</div>

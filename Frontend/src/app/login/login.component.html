@@ -1,0 +1,53 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>{{title}}
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer table-responsive"> 
+
+            <!--Form-->
+            <form method="POST" class="col-lg-8 upform">
+                <div class="mb-3">
+                    <label for="exampleInputUserName" class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control" id="loginuser" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="loginpass" required>
+                </div>
+                <br>
+                <div>
+                    <a routerLink="/signup" id="accnt">I don't have an account ! SignUp</a>
+                </div>
+                <br>
+                <div>
+                  <a routerLink="/login/updatepasswd" id="accnt">Forgot Password ?</a>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary" id="up-btn">LogIn</button>
+                </div>
+              </form>
+              <!--/Form-->
+          
+        </div>
+      </div>
+    </div> 
+</div>

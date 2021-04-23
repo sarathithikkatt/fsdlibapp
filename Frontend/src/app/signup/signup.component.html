@@ -1,0 +1,59 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>{{title}}
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer table-responsive"> 
+
+          <!--Form-->
+          <form method="POST" class="col-lg-8 upform" (ngSubmit)="addAccount()">
+            <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Name</label>
+                <input type="text" name="name" [(ngModel)]="accountItem.name" class="form-control" id="exampleInputPassword" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" name="email" [(ngModel)]="accountItem.email" class="form-control" id="email" aria-describedby="emailHelp" required>
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputUserName" class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" [(ngModel)]="accountItem.username" id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" name="password" [(ngModel)]="accountItem.password" class="form-control" id="pwd" required>
+                <span id="pass"></span>
+            </div>
+            <br>
+            <div>
+                <a routerLink="/login" id="accnt">I already have an account ! LogIn</a>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" id="up-btn">SignUp</button>
+            </div>
+          </form>
+          <!--/Form-->
+
+        </div>
+      </div>
+    </div> 
+</div>

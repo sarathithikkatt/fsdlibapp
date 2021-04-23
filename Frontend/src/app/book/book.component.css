@@ -1,0 +1,11 @@
+.books-list{
+    margin-left: 3%;
+    margin-top: 5%;
+}
+
+/* update/delete button */
+#update-btn{
+    margin-left: 21%;
+    margin-top: 10%;
+    padding-left: 22px;
+  }

@@ -1,0 +1,49 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>{{title}}
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="body-space top-spacer table-responsive"> 
+            <!--/Books-->
+            <br><br>
+                <div *ngFor="let book of booksObj" class="row books-list">    
+                  <div class="col-md-2 col-sm-3 text-center">
+                    <a class="story-title" href="#"><img alt="bookimage" src="assets/images/{{book.image}}" style="width:80px;height:100px" class="book-img"></a>
+                  </div>
+                  <div class="col-md-10 col-sm-9">
+                    <h3>{{book.title}}</h3>
+                    <div class="row">
+                      <div class="col-xs-9">
+                        <h4><span class="label label-default">{{book.author}}</span></h4><h4>
+                        <small style="font-family:courier,'new courier';" class="text-muted">{{book.genre}} - <a [routerLink]="['/books/book',book._id]" class="text-muted" >Read More</a></small>
+                        </h4>
+                      </div>
+                      <div class="col-xs-3"></div>
+                    </div>
+                  <br>  <hr>
+                  </div>
+                </div>
+            <!-- Books -->
+
+        </div>
+      </div>
+    </div> 
+  </div>
